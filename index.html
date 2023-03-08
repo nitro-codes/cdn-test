@@ -9,26 +9,44 @@
     src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script.js"
   ></script>
   -->
-  <script src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/simple-script2.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script1.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script2.js" crossorigin="anonymous"></script>
+  <script>
+    (function (w,d,n,h,i){
+        w[n]=w[n]||{init:function(){w[n].q=arguments}};
+        h=d.getElementsByTagName('head')[0];
+        i=h.getElementsByTagName('script')[0];
+        r=d.createElement('script');
+        r.async=1;
+        r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script3.js";
+        h.insertBefore(r,i);
+    })(window, document, 'Script3')
+    
+    (function (w,d,n,h,i){
+        w[n]=w[n]||{init:function(){w[n].q=arguments}};
+        h=d.getElementsByTagName('head')[0];
+        i=h.getElementsByTagName('script')[0];
+        r=d.createElement('script');
+        r.async=1;
+        r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script4.js";
+        r.crossOrigin='anonymous';
+        h.insertBefore(r,i);
+    })(window, document, 'Script4')
+  </script>
   <script>
     window.onerror = function (message, url, line, column, error) {
         console.log(message, url, line, column, error);
     }
-    run(); // call function declared in app.js
-
-    // (function (w,d,n,h,i){
-    //     //w[n]=w[n]||{init:function(){w[n].q=arguments}};
-    //     h=d.getElementsByTagName('head')[0];
-    //     i=h.getElementsByTagName('script')[0];
-    //     r=d.createElement('script');
-    //     r.async=1;
-    //     //r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script.js";
-    //     r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/simple-script2.js";
-    //     //r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/simple-script-self.js";
-    //     r.crossOrigin='anonymous';
-    //     h.insertBefore(r,i);
-    // })(window, document, 'Code')
-
+    
+    console.log('script1.run1() - normal script tag');
+    run1();
+    console.log('script2.run2() - normal script tag - crossorigin=anonymous');
+    run2();
+    console.log('script3.run3() - runtime script tag');
+    Script3.run3();
+    console.log('script4.run4() - runtime script tag - crossorigin=anonymous');
+    Script4.run4();
+    
     // var originalFunction = run;
     // window.Code = function(a) {
     //     console.log("myFunction is being called!");
