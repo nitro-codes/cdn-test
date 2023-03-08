@@ -16,9 +16,13 @@
         console.log(message, url, line, column, error);
     };
     window.addEventListener("load", (event) => {
-      console.log("page is fully loaded");
+      //console.log("page is fully loaded");
       console.log('script3.run3() - runtime script tag');
       run3();
+      
+    });
+    window.addEventListener("load", (event) => {
+      //console.log("page is fully loaded");
       console.log('script4.run4() - runtime script tag - crossorigin=anonymous');
       run4();
     });
