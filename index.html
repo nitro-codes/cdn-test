@@ -39,13 +39,32 @@
     }
     
     console.log('script1.run1() - normal script tag');
-    run1();
+    try {
+      run1();
+    } catch (e) {
+      console.error(e)
+    }
+    
     console.log('script2.run2() - normal script tag - crossorigin=anonymous');
-    run2();
+    try {
+      run2();
+    } catch (e) {
+      console.error(e)
+    }
+    
     console.log('script3.run3() - runtime script tag');
-    Script3.run3();
+    try {
+      Script3.run3();
+    } catch (e) {
+      console.error(e)
+    }
+    
     console.log('script4.run4() - runtime script tag - crossorigin=anonymous');
-    Script4.run4();
+    try {
+      Script4.run4();
+    } catch (e) {
+      console.error(e)
+    }
     
     // var originalFunction = run;
     // window.Code = function(a) {
