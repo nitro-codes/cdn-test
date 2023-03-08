@@ -37,19 +37,19 @@
         h.insertBefore(r,i);
     })(window, document, 'Script4');
   </script>
-  <script>
+  <script async defer>
     console.log('script1.run1() - normal script tag');
     run1();
   </script>
-  <script>
+  <script async defer>
     console.log('script2.run2() - normal script tag - crossorigin=anonymous');
     run2();
   </script>
-  <script>
+  <script async defer>
     console.log('script3.run3() - runtime script tag');
     run3();
   </script>
-  <script>
+  <script async defer>
     console.log('script4.run4() - runtime script tag - crossorigin=anonymous');
     run4();
   </script>
