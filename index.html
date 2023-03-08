@@ -17,7 +17,10 @@
     };
     window.addEventListener("load", (event) => {
       console.log("page is fully loaded");
+      console.log('script3.run3() - runtime script tag');
       run3();
+      console.log('script4.run4() - runtime script tag - crossorigin=anonymous');
+      run4();
     });
 
     (function (w,d,n,h,i){
