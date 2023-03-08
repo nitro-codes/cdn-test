@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sandbox</title>
+  <!-- 
+  <script 
+    src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script.js"
+  ></script>
+  -->
+  <script src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/simple-script2.js" crossorigin="anonymous"></script>
+  <script>
+    window.onerror = function (message, url, line, column, error) {
+        console.log(message, url, line, column, error);
+    }
+    run(); // call function declared in app.js
+
+    // (function (w,d,n,h,i){
+    //     //w[n]=w[n]||{init:function(){w[n].q=arguments}};
+    //     h=d.getElementsByTagName('head')[0];
+    //     i=h.getElementsByTagName('script')[0];
+    //     r=d.createElement('script');
+    //     r.async=1;
+    //     //r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script.js";
+    //     r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/simple-script2.js";
+    //     //r.src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/simple-script-self.js";
+    //     r.crossOrigin='anonymous';
+    //     h.insertBefore(r,i);
+    // })(window, document, 'Code')
+
+    // var originalFunction = run;
+    // window.Code = function(a) {
+    //     console.log("myFunction is being called!");
+    //     originalFunction(a);
+    // }
+
+    // var originalFunction = run;
+    // window.myFunction = function(a, b, c) {
+    // /* work before the function is called */
+    // try {
+    //     var returnValue = originalFunction.call(this, a, b, c);
+    //     /* work after the function is called */
+    //     return returnValue;
+    // }
+    // catch (e) {
+    //     /* work in case there is an error */
+    //     throw 'er: ' + e;
+    // }
+    // }
+  </script>
+</head>
+
+<body></body>
+
+</html>
