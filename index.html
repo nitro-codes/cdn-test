@@ -26,6 +26,15 @@
       console.log('script4.run4() - runtime script tag - crossorigin=anonymous');
       run4();
     });
+    window.addEventListener("load", (event) => {
+      //console.log("page is fully loaded");
+      console.log('script3.run3() - runtime script tag - trycatch');
+      try {
+        run3();
+      } catch(e) { 
+        console.log(e);
+      }
+    });
 
     (function (w,d,n,h,i){
         //w[n]=w[n]||{init:function(){w[n].q=arguments}};
@@ -56,15 +65,7 @@
     console.log('script2.run2() - normal script tag - crossorigin=anonymous');
     run2();
   </script>
-  <script async defer>
-    console.log('script3.run3() - runtime script tag');
-    run3();
-    
-  </script>
-  <script async defer>
-    console.log('script4.run4() - runtime script tag - crossorigin=anonymous');
-    run4();
-  </script>
+  
   <!-- <script>
     console.log('script1.run1() - normal script tag');
     try {
