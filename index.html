@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/gh/nitro-codes/cdn-test@main/script2.js" crossorigin="anonymous"></script>
   <script>
     window.onerror = function (message, url, line, column, error) {
-        console.log(message, url, line, column, error);
+        console.warn(message, url, line, column, error);
     };
     window.addEventListener("load", (event) => {
       //console.log("page is fully loaded");
@@ -33,7 +33,7 @@
         run3();
       } catch(e) { 
         console.log(e);
-        throw(e);
+        throw;
       }
     });
 
