@@ -29,18 +29,12 @@
     window.addEventListener("load", (event) => {
       //console.log("page is fully loaded");
       console.log('script3.run3() - runtime script tag - trycatch');
-      function SurflyError(m,e) {
-        this.message = m;
-        this.name = "UserException";
-        this.stack = e.stack;
-        this.error = e;
-      }
       try {
         run3();
       } catch(e) { 
         //console.log(e);
         //console.error(e);
-        throw new SurflyError('Surfly Error', e);
+        throw e;
       }
     });
 
